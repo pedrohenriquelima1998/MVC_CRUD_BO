@@ -1,0 +1,78 @@
+﻿@model BLL.Aluno
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes do ALuno</title>
+</head>
+<body>
+    <div>
+        <h4>Detalhes do ALuno</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Idade)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Idade)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DataInscricao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DataInscricao)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sexo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Foto)
+            </dt>
+    
+            <dd>
+                @*@Html.DisplayFor(model => model.Foto)*@
+                <img src="@Url.Content(@Model.Foto)" alt="@Model.Texto" />
+            </dd>
+    
+            @*<dt>
+                @Html.DisplayNameFor(model => model.Texto)
+            </dt>*@
+    
+            <dd>
+                @Html.DisplayFor(model => model.Texto)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
